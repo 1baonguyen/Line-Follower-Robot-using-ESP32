@@ -1,0 +1,22 @@
+# ESP-IDF build output
+build/
+sdkconfig
+sdkconfig.old
+
+# Python environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Local IDE files
+.vscode/settings.json
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
