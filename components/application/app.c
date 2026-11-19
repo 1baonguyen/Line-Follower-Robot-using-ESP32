@@ -32,6 +32,8 @@ void app_start(void)
 
 
      /* 3. Normal start-up */
+     // set up for main program
+
     if (loadcell_service_init() != ESP_OK) {
         ESP_LOGE(TAG, "Load cell init failed");
         return;
