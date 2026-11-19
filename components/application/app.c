@@ -8,11 +8,19 @@
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "esp_system.h"
 
 static const char *TAG = "app";
 
 void app_start(void)
 {
+    esp_reset_reason_t reason = esp_reset_reason();
+
+    ESP_LOGW("BOOT", "================================");
+    ESP_LOGW("BOOT", "ESP32 RESTART DETECTED");
+    ESP_LOGW("BOOT", "Reset reason: %d", reason);
+    ESP_LOGW("BOOT", "================================");
+    
     /* 1. Start log capture immediately (queues logs until Wi-Fi is up) */
     wifi_ap_init_base();          /* 1. Start lwIP + event loop once */
     telemetry_init();   
