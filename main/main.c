@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include "app.h"
 
 void app_main(void)
 {
-    printf("This is sample_project(1) firmware");
+    app_start();
 }
